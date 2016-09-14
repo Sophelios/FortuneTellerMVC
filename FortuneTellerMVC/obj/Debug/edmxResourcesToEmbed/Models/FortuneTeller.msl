@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FortuneTellerMVCModelStoreContainer" CdmEntityContainer="FortuneTellerMVCEntities">
+    <EntitySetMapping Name="BMonths">
+      <EntityTypeMapping TypeName="FortuneTellerMVCModel.BMonth">
+        <MappingFragment StoreEntitySet="BMonth">
+          <ScalarProperty Name="BMonthID" ColumnName="BMonthID" />
+          <ScalarProperty Name="BMonth1" ColumnName="BMonth" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="FortuneTellerMVCModel.Customer">
+        <MappingFragment StoreEntitySet="Customers">
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="BMonthID" ColumnName="BMonthID" />
+          <ScalarProperty Name="FavColorID" ColumnName="FavColorID" />
+          <ScalarProperty Name="NumOfSibsID" ColumnName="NumOfSibsID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FavColors">
+      <EntityTypeMapping TypeName="FortuneTellerMVCModel.FavColor">
+        <MappingFragment StoreEntitySet="FavColor">
+          <ScalarProperty Name="ModeOfTransport" ColumnName="ModeOfTransport" />
+          <ScalarProperty Name="FavColorID" ColumnName="FavColorID" />
+          <ScalarProperty Name="FavColor1" ColumnName="FavColor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NumOfSibs">
+      <EntityTypeMapping TypeName="FortuneTellerMVCModel.NumOfSib">
+        <MappingFragment StoreEntitySet="NumOfSibs">
+          <ScalarProperty Name="RetireLocal" ColumnName="RetireLocal" />
+          <ScalarProperty Name="NumOfSibsID" ColumnName="NumOfSibsID" />
+          <ScalarProperty Name="NumOfSibs1" ColumnName="NumOfSibs1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
