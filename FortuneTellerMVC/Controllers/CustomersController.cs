@@ -99,11 +99,12 @@ namespace FortuneTellerMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "CustomerID,FirstName,LastName,Age,BMonthID,FavColorID,NumOfSibsID")] Customer customer)
         {
+
             if (ModelState.IsValid)
             {
                 db.Customers.Add(customer);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Details", new { id = customer.CustomerID });
             }
 
             ViewBag.BMonthID = new SelectList(db.BMonths, "BMonthID", "BMonth1", customer.BMonthID);

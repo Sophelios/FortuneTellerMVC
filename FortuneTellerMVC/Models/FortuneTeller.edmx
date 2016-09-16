@@ -30,7 +30,7 @@
           </Key>
           <Property Name="FavColorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="FavColor" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="ModeOfTransport" Type="nvarchar" MaxLength="50" />
+          <Property Name="ModeOfTransport" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="NumOfSibs">
           <Key>
@@ -38,7 +38,7 @@
           </Key>
           <Property Name="NumOfSibsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NumOfSibs1" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="RetireLocal" Type="nvarchar" MaxLength="50" />
+          <Property Name="RetireLocal" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <Association Name="FK_Customers_BMonth">
           <End Role="BMonth" Type="Self.BMonth" Multiplicity="1" />
@@ -128,7 +128,7 @@
           <Property Name="FavColorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="FavColor1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Customers" Relationship="Self.FK_Customers_FavColor" FromRole="FavColor" ToRole="Customers" />
-          <Property Name="ModeOfTransport" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ModeOfTransport" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
         <EntityType Name="NumOfSib">
           <Key>
@@ -137,7 +137,7 @@
           <Property Name="NumOfSibsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="NumOfSibs1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Customers" Relationship="Self.FK_Customers_NumOfSibs" FromRole="NumOfSibs" ToRole="Customers" />
-          <Property Name="RetireLocal" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RetireLocal" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
         <Association Name="FK_Customers_BMonth">
           <End Role="BMonth" Type="Self.BMonth" Multiplicity="1" />

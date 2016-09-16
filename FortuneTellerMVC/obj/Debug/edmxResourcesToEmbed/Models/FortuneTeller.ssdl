@@ -25,7 +25,7 @@
     </Key>
     <Property Name="FavColorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="FavColor" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="ModeOfTransport" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModeOfTransport" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="NumOfSibs">
     <Key>
@@ -33,7 +33,7 @@
     </Key>
     <Property Name="NumOfSibsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="NumOfSibs1" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="RetireLocal" Type="nvarchar" MaxLength="50" />
+    <Property Name="RetireLocal" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <Association Name="FK_Customers_BMonth">
     <End Role="BMonth" Type="Self.BMonth" Multiplicity="1" />
