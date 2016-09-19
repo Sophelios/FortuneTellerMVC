@@ -1,13 +1,13 @@
 ﻿@model FortuneTellerMVC.Models.Customer
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = Model.FirstName + "'s Fortune";
 }
 
-<h2>Details</h2>
+<h2>@Model.FirstName's Fortune</h2>
 
 <div>
-    <h4>Customer</h4>
+    <h4></h4>
     <hr />
         @Model.FirstName @Model.LastName will retire in @ViewBag.NumberOfYears years with $@ViewBag.RetWith in the bank, a vacation home in @Model.NumOfSib.RetireLocal and @Model.FavColor.ModeOfTransport.
 </div>
